@@ -1,0 +1,113 @@
+# ==============================
+
+# Java / Spring Boot
+
+# ==============================
+
+# Maven build output
+
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Maven wrapper
+
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+
+*.log
+
+# ==============================
+
+# IDEs
+
+# ==============================
+
+# IntelliJ
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse / STS
+
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# NetBeans
+
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# VS Code
+
+.vscode/
+
+# ==============================
+
+# Node / Angular (future frontend)
+
+# ==============================
+
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==============================
+
+# OS Files
+
+# ==============================
+
+.DS_Store
+Thumbs.db
+
+# ==============================
+
+# Environment Files
+
+# ==============================
+
+.env
+.env.*
+*.local
+
+# ==============================
+
+# Docker
+
+# ==============================
+
+docker-compose.override.yml
+
+# ==============================
+
+# Documentation temp files
+
+# ==============================
+
+*.swp
+*.swo
+
+# ==============================
+
+# Project specific
+
+# ==============================
+
+backend/platform_api/HELP.md
