@@ -1,5 +1,6 @@
 package com.platform.service;
 
+import com.platform.dto.request.CreateArticleRequest;
 import com.platform.entity.Article;
 import com.platform.repository.ArticleRepository;
 import  org.springframework.stereotype.Service;
@@ -16,8 +17,14 @@ public class ArticleService {
         this.repository = repository;
     }
 
-    public Article createArticleService(Article article)
+    public Article createArticleService(CreateArticleRequest request)
     {
+
+        Article article= new Article(
+                request.getTitle(),
+                request.getContent(),
+                request.getAuthor()
+        );
         return  repository.save(article);
     }
 

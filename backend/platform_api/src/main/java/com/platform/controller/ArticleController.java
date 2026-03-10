@@ -1,5 +1,6 @@
 package com.platform.controller;
 
+import com.platform.dto.request.CreateArticleRequest;
 import com.platform.entity.Article;
 import com.platform.service.ArticleService;
 import org.springframework.web.bind.annotation.*;
@@ -17,9 +18,9 @@ public class ArticleController {
     }
 
     @PostMapping("/create_article")
-    public Article createArticle(@RequestBody Article article)
+    public Article createArticle(@RequestBody CreateArticleRequest request)
     {
-        return service.createArticleService(article);
+        return service.createArticleService(request);
     }
 
     @GetMapping("/getAll_articles")
