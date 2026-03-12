@@ -3,6 +3,7 @@ package com.platform.controller;
 import com.platform.dto.request.CreateArticleRequest;
 import com.platform.entity.Article;
 import com.platform.service.ArticleService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,7 +19,7 @@ public class ArticleController {
     }
 
     @PostMapping("/create_article")
-    public Article createArticle(@RequestBody CreateArticleRequest request)
+    public Article createArticle(@Valid  @RequestBody CreateArticleRequest request)
     {
         return service.createArticleService(request);
     }
