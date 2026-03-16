@@ -4,6 +4,8 @@ import com.platform.dto.request.CreateArticleRequest;
 import com.platform.entity.Article;
 import com.platform.service.ArticleService;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,6 +30,12 @@ public class ArticleController {
     public List<Article> getAllArticles()
     {
         return service.getAllArticles();
+    }
+
+    @GetMapping("/get_page")
+    public Page<Article>getArticles(Pageable pageable)
+    {
+        return service.getArticles(pageable);
     }
 
 

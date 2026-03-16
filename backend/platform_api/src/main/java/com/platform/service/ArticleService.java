@@ -3,6 +3,8 @@ package com.platform.service;
 import com.platform.dto.request.CreateArticleRequest;
 import com.platform.entity.Article;
 import com.platform.repository.ArticleRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import  org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,6 +36,10 @@ public class ArticleService {
         return repository.findAll();
     }
 
+    public Page<Article> getArticles(Pageable pageable)
+    {
+        return repository.findAll(pageable);
+    }
 
 
 }
