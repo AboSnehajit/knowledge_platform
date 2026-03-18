@@ -3,6 +3,14 @@ package com.platform.entity;
 import jakarta.persistence.*;
 
 @Entity
+@Table(
+        name="article",
+        indexes = {
+                @Index(name = "idx_title", columnList = "title"),
+                @Index( name="idx_author",columnList = "author"),
+
+        }
+)
 public class Article {
 
 
